@@ -1,0 +1,31 @@
+# for relational DB
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: --YOUR PASS--
+  jpa:
+    hibernate:
+      ddl-auto: update 
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+
+# for elastic:
+elasticsearch:
+  cluster-name: docker-cluster
+  cluster-nodes: localhost:9300
+
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: info
+    org.hibernate: debug
+
+server:
+  port: 8001 #set your port
