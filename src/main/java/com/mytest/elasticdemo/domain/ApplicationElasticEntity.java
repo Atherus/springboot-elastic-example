@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 @Data
-@Document(indexName = "myTestIndexName", type = "application")
+@Document(indexName = "myindexname", type = "application")
 public class ApplicationElasticEntity {
 
     public static final String TABLE_NAME = "APPLICATION";
